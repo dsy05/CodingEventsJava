@@ -8,6 +8,9 @@
 
 <h1>All Events</h1>
 
+<!--unless checks if events is not null and if events contains something if both true message not printed if both false prints message-->
+<p th:unless="${events} and ${events.size()}">NO EVENTS!</p>
+
 <ul>
     <th:block th:each="event : ${events}">
         <li th:text="${event}"></li>
